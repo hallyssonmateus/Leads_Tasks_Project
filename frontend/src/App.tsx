@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import LeadsPage from './pages/LeadsPage';
 import LeadsDetailsPage from './pages/LeadsDetailsPage';
 import './index.css'
-
 function App() {
 
   return (
