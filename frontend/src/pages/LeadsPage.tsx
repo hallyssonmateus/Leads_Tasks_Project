@@ -26,7 +26,7 @@ export default function LeadsPage() {
     );
 
  return (
-   <div className="bg-gray-100 min-h-screen border-2">
+   <div className="bg-gray-100 min-h-screen px-30">
         <div className="container mx-auto px-4 py-6 bg-white shadow-md">
             {/* Cabeçalho da Página */}
             <header className="flex items-center justify-between">
@@ -41,7 +41,7 @@ export default function LeadsPage() {
         </div>
 
         {/* Barra de Busca e Filtros */}
-        <div className="container mx-auto px-4 py-2 border">
+        <div className="container mx-auto py-2">
             <div className="flex justify-between items-center">
                 <SearchBar placeholder="Busque por email ou nome" onSearch={() => {}}/>
 
@@ -50,11 +50,11 @@ export default function LeadsPage() {
         </div>
         
         {/* Contagem de Leads e Lista */}
-        <p className="text-sm text-gray-600 mb-4 px-4">
+        <p className="container text-sm text-gray-600 mb-4 px-2">
         Showing x of x leads
-      </p>
+        </p>
     
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4">
+        <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4">
             {filteredLeads.length > 0 ? (
                             // 4. CORREÇÃO DA RENDERIZAÇÃO: Iteração correta com .map()
                             filteredLeads.map((lead) => (
