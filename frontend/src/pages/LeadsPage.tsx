@@ -26,10 +26,10 @@ export default function LeadsPage() {
     );
 
  return (
-   <div className="bg-gray-100 min-h-screen px-30">
-        <div className="container mx-auto px-4 py-6 bg-white shadow-md">
+   <div className="bg-gray-100 min-h-screen">
+        <div className=" bg-white shadow-md mb-6">
             {/* Cabeçalho da Página */}
-            <header className="flex items-center justify-between">
+            <header className="container mx-auto px-4 py-6 flex flex-col gap-2 sm:flex-row justify-between md:justify-between ">
                 <div>
                     <h1 className="text-3xl font-semibold text-blue-800">Leads</h1>
                     <p>Administre seus leads aqui</p>
@@ -40,21 +40,24 @@ export default function LeadsPage() {
             </header>
         </div>
 
-        {/* Barra de Busca e Filtros */}
-        <div className="container mx-auto py-2">
-            <div className="flex justify-between items-center">
-                <SearchBar placeholder="Busque por email ou nome" onSearch={() => {}}/>
+        <div className='container mx-auto px-4'>
+            {/* Barra de Busca e Filtros */}
+            <div className="container mx-auto py-2">
+                <div className="flex flex-col gap-2 sm:flex-col sm:gap-2 md:flex-row justify-between">
+                    <div className="w-full md:w-1/3">
+                        <SearchBar placeholder="Busque por email ou nome" onSearch={() => {}}/>
+                    </div>
 
-                <FilterTabs currentStatus={currentFilter} onChangeStatus={setCurrentFilter}/>
+                    <FilterTabs currentStatus={currentFilter} onChangeStatus={setCurrentFilter}/>
+                </div>
             </div>
-        </div>
-        
-        {/* Contagem de Leads e Lista */}
-        <p className="container text-sm text-gray-600 mb-4 px-2">
-        Showing x of x leads
-        </p>
-    
-        <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4">
+
+            {/* Contagem de Leads e Lista */}
+            <p className="text-sm text-gray-600 mb-4">
+            Showing x of x leads
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pb-12">
             {filteredLeads.length > 0 ? (
                             // 4. CORREÇÃO DA RENDERIZAÇÃO: Iteração correta com .map()
                             filteredLeads.map((lead) => (
@@ -65,7 +68,9 @@ export default function LeadsPage() {
                                 Nenhum lead encontrado com o filtro atual.
                             </div>
                         )}
-        </div>
+            </div>
+        </div>    
+     
    </div>
  );
 }

@@ -10,7 +10,7 @@ const FilterTabs: React.FC<FilterTabsProps> = ({ currentStatus, onChangeStatus }
   const filters: (LeadStatus | 'All')[] = ['All', 'New', 'Qualified', 'Won', 'Lost'];
   
   return (
-    <div className="flex bg-gray-100">
+    <div className="flex bg-gray-100 gap-2">
         {filters.map((status) => {
                 const isActive = status === currentStatus;
                 

@@ -22,8 +22,9 @@ Abaixo estão as tela das principais páginas da aplicação:
  
 
 | **Página de Leads - Principal**  
-![Leads Page](../Leads_Tasks_Project/frontend/src/assets/Img_LeadsPage.PNG)
-
+<p align="center">
+  <img src="frontend/src/assets/Img_LeadsPage.JPG" width="100%" alt="Leads Page"/>
+</p>
 
 ## 🖥️ Tecnologias Utilizadas
 
